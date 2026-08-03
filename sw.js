@@ -33,6 +33,7 @@ const SHELL = [
   '/data/assessments.js',
   '/data/lessons-python.js',
   '/data/lessons-rust.js',
+  '/data/lessons-rust-extra.js',
   '/data/lessons-java.js',
   '/data/lessons-web.js',
   '/data/track-python.js',

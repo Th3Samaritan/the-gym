@@ -416,6 +416,7 @@ function boot() {
     const dataFiles = [
       '/data/curriculum.js',
       '/data/assessments.js',
+      '/data/lessons-rust-extra.js',
       ...TRACKS.flatMap((t) => [
         `/data/lessons-${t.id}.js`,
         t.kind === 'code' ? `/data/track-${t.id}.js` : null,
