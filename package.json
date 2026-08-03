@@ -1,11 +1,21 @@
 {
-  "name": "prism-playground",
+  "name": "the-gym",
   "private": true,
   "type": "module",
-  "description": "Marks the playground's .js files as ES modules so the scripts in tools/ can import them under Node. The site itself needs no build step and no dependencies.",
+  "description": "The GYM — a free, open-source interactive coding learning platform with 99 lessons, 56 challenges and 9 timed assessments. Runs entirely in the browser.",
   "scripts": {
     "audit": "node tools/audit.mjs",
+    "audit:lessons": "node tools/audit-lessons.mjs",
+    "audit:grader": "node tools/grader.test.mjs",
     "sweep:rust": "node tools/sweep.mjs rust",
-    "sweep:java": "node tools/sweep.mjs java"
+    "sweep:java": "node tools/sweep.mjs java",
+    "sweep:python": "node tools/sweep.mjs python",
+    "sweep:web": "node tools/sweep-web.mjs",
+    "sweep": "npm run sweep:rust && npm run sweep:java && npm run sweep:python && npm run sweep:web",
+    "test": "npm run audit:lessons && npm run audit:grader && npm run audit",
+    "ci": "npm test && npm run sweep"
+  },
+  "devDependencies": {
+    "playwright": "^1.56.1"
   }
 }
