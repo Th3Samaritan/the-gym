@@ -90,9 +90,6 @@ function sidebarHtml() {
     </a>
 
     <div class="sidebar-foot">
-      <a class="nav-item" href="../index.html">
-        <span class="nav-glyph">←</span> Back to portfolio
-      </a>
     </div>`;
 }
 
@@ -417,11 +414,11 @@ function boot() {
   // Notify the SW about all data files so they're cached before the user visits them.
   if ('serviceWorker' in navigator && navigator.serviceWorker.controller) {
     const dataFiles = [
-      '/playground/data/curriculum.js',
-      '/playground/data/assessments.js',
+      '/data/curriculum.js',
+      '/data/assessments.js',
       ...TRACKS.flatMap((t) => [
-        `/playground/data/lessons-${t.id}.js`,
-        t.kind === 'code' ? `/playground/data/track-${t.id}.js` : null,
+        `/data/lessons-${t.id}.js`,
+        t.kind === 'code' ? `/data/track-${t.id}.js` : null,
       ]).filter(Boolean),
     ];
     navigator.serviceWorker.controller.postMessage({ type: 'precache', urls: dataFiles });

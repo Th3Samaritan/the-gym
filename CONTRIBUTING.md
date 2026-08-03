@@ -187,14 +187,16 @@ node tools/audit.mjs
 
 ```bash
 node tools/sweep.mjs rust
+node tools/sweep.mjs java
+node tools/sweep.mjs python
 ```
 
 `audit.mjs` is the sharp one: it pushes every challenge's own reference solution
 through its own rubric checks. If your reference solution does not score 100 on
 quality, efficiency and style, your **challenge definition** is wrong.
 
-For Python, Web and lesson exercises, run the browser sweep from the README —
-they need Pyodide and a DOM, so Node cannot do it.
+For Web and lesson exercises, run the browser sweep from the README —
+they need a DOM, so Node cannot do it.
 
 ---
 

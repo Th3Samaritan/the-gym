@@ -9,7 +9,7 @@ challenges** and **9 timed assessments**. Everything runs in your browser.
 No account required. No server to deploy. No build step. Plain ES modules served
 straight from GitHub Pages.
 
-Live at `/playground/`.
+Live at [th3samaritan.github.io/the-gym](https://th3samaritan.github.io/the-gym/).
 
 ---
 
@@ -38,7 +38,7 @@ To run it locally:
 python -m http.server 8741
 ```
 
-Then visit `http://localhost:8741/playground/`.
+Then visit `http://localhost:8741/`.
 
 On first visit you are asked for a username and display name — **no password, no
 email** — and which courses you want. You can skip it entirely and still use
@@ -115,7 +115,6 @@ site, and it is stated plainly in the UI. Do not put anything sensitive in it.
 ## Layout
 
 ```
-playground/
   index.html              app shell
   config.js               branding + optional Supabase credentials
   css/app.css             design system (dark + light)
@@ -160,9 +159,10 @@ node tools/audit-lessons.mjs   # lesson structure
 node tools/audit.mjs           # challenge rubric self-check
 node tools/sweep.mjs rust      # actually compile + run every Rust solution
 node tools/sweep.mjs java
+node tools/sweep.mjs python    # run Python solutions via Compiler Explorer
 ```
 
-Then run the browser sweep (see below) for Python, Web and lesson exercises.
+Then run the browser sweep (see below) for Web and lesson exercises.
 
 ---
 
@@ -180,12 +180,12 @@ Runs every challenge's *own reference solution* through its quality, efficiency
 and style checks. A failure means the challenge definition is wrong — a regex
 that mis-fires on prose, or a stale `refLines`.
 
-**3. Real execution** — `node tools/sweep.mjs rust|java`
+**3. Real execution** — `node tools/sweep.mjs rust|java|python`
 Compiles and runs every reference solution on Compiler Explorer and asserts all
 cases pass.
 
-**4. Browser sweep** — Python, Web and every lesson exercise need a browser.
-Open `/playground/`, then in the console:
+**4. Browser sweep** — Web and every lesson exercise need a browser.
+Open the app in your browser, then in the console:
 
 ```js
 const v = '?b=' + Date.now();

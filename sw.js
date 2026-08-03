@@ -8,37 +8,37 @@
 
 const CACHE = 'the-gym-v3';
 const SHELL = [
-  '/playground/',
-  '/playground/index.html',
-  '/playground/config.js',
-  '/playground/manifest.json',
-  '/playground/icon.svg',
-  '/playground/css/app.css',
-  '/playground/js/app.js',
-  '/playground/js/store.js',
-  '/playground/js/runner.js',
-  '/playground/js/grader.js',
-  '/playground/js/editor.js',
-  '/playground/js/ui.js',
-  '/playground/js/coach.js',
-  '/playground/js/roadmap.js',
-  '/playground/js/identity.js',
-  '/playground/js/leaderboard.js',
-  '/playground/js/view-learn.js',
-  '/playground/js/view-challenge.js',
-  '/playground/js/view-assessment.js',
-  '/playground/js/view-hall.js',
-  '/playground/js/views-core.js',
-  '/playground/data/curriculum.js',
-  '/playground/data/assessments.js',
-  '/playground/data/lessons-python.js',
-  '/playground/data/lessons-rust.js',
-  '/playground/data/lessons-java.js',
-  '/playground/data/lessons-web.js',
-  '/playground/data/track-python.js',
-  '/playground/data/track-rust.js',
-  '/playground/data/track-java.js',
-  '/playground/data/track-web.js',
+  '/',
+  '/index.html',
+  '/config.js',
+  '/manifest.json',
+  '/icon.svg',
+  '/css/app.css',
+  '/js/app.js',
+  '/js/store.js',
+  '/js/runner.js',
+  '/js/grader.js',
+  '/js/editor.js',
+  '/js/ui.js',
+  '/js/coach.js',
+  '/js/roadmap.js',
+  '/js/identity.js',
+  '/js/leaderboard.js',
+  '/js/view-learn.js',
+  '/js/view-challenge.js',
+  '/js/view-assessment.js',
+  '/js/view-hall.js',
+  '/js/views-core.js',
+  '/data/curriculum.js',
+  '/data/assessments.js',
+  '/data/lessons-python.js',
+  '/data/lessons-rust.js',
+  '/data/lessons-java.js',
+  '/data/lessons-web.js',
+  '/data/track-python.js',
+  '/data/track-rust.js',
+  '/data/track-java.js',
+  '/data/track-web.js',
 ];
 
 /* ---- install: pre-cache the app shell ---- */
@@ -97,7 +97,7 @@ self.addEventListener('fetch', (event) => {
       }).catch(() => {
         // Offline: for navigation requests, return the cached shell
         if (event.request.mode === 'navigate') {
-          return caches.match('/playground/');
+          return caches.match('/');
         }
         // For other requests, just fail — cached resources already handled above
         return new Response('Offline — this resource is not cached.', { status: 503 });
