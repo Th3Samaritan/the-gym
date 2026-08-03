@@ -3,7 +3,7 @@
    ============================================================ */
 
 import { TRACKS } from '../data/curriculum.js';
-import { BRAND } from '../config.js';
+import { BRAND, CLOUD_AUTH } from '../config.js';
 import * as store from './store.js';
 import { escapeHtml, toast, modal } from './ui.js';
 import { renderDashboard, renderTrack, renderRubric, renderScratch, renderProfile, renderStart } from './views-core.js';
@@ -13,7 +13,8 @@ import { renderAssessmentList, renderExam, renderReport, disposeAssessment } fro
 import { renderLearnHome, renderCourse, renderLesson, disposeLearn } from './view-learn.js';
 import { renderHall } from './view-hall.js';
 import { renderRoadmap } from './roadmap.js';
-import { ensureProfile, openProfileDialog } from './identity.js';
+import { ensureProfile, openProfileDialog, openAuthDialog, refreshProfileChip, configureCloud } from './identity.js';
+import { isLoggedIn } from './auth.js';
 import { publish } from './leaderboard.js';
 
 const THEME_KEY = 'the-gym-theme';
@@ -347,6 +348,8 @@ async function route() {
 function boot() {
   initTheme();
 
+  configureCloud(CLOUD_AUTH.adminPublicKey, CLOUD_AUTH.registerToken);
+
   document.querySelector('.sidebar').innerHTML = sidebarHtml();
   document.querySelector('.topbar').innerHTML = topbarHtml();
 
@@ -372,7 +375,7 @@ function boot() {
   });
 
   document.getElementById('level-chip').addEventListener('click', async () => {
-    await openProfileDialog({ allowSkip: true });
+    await openAuthDialog();
     refreshShellStats();
   });
 
@@ -417,6 +420,7 @@ function boot() {
       '/data/curriculum.js',
       '/data/assessments.js',
       '/data/lessons-rust-extra.js',
+      '/data/users.json',
       ...TRACKS.flatMap((t) => [
         `/data/lessons-${t.id}.js`,
         t.kind === 'code' ? `/data/track-${t.id}.js` : null,

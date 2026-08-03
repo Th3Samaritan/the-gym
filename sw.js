@@ -40,6 +40,7 @@ const SHELL = [
   '/data/track-rust.js',
   '/data/track-java.js',
   '/data/track-web.js',
+  '/data/users.json',
 ];
 
 /* ---- install: pre-cache the app shell ---- */
