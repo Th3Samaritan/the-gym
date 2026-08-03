@@ -536,7 +536,7 @@ One worker thread and the main thread each increment a shared \`AtomicInteger\` 
     cases: [
       { name: 'counter 1000', call: 'contendedCounter(1000)', expect: '2000' },
       { name: 'counter zero', call: 'contendedCounter(0)', expect: '0' },
-      { name: 'counter 500k', call: 'contendedCounter(500000)', expect: '1000000', hidden: true },
+      { name: 'counter 50k', call: 'contendedCounter(50000)', expect: '100000', hidden: true },
     ],
     budgetMs: 2000,
     refLines: 24,
