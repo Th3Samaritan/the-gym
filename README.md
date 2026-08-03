@@ -1,9 +1,12 @@
 # The GYM
 
+[![CI](https://github.com/Th3Samaritan/the-gym/actions/workflows/ci.yml/badge.svg)](https://github.com/Th3Samaritan/the-gym/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+
 **Train your programming.** A free, open-source gym for learning to code — from
 "I have never written a line" to graded, timed assessments.
 
-Four courses (Python, Rust, Java, Web), **99 from-scratch lessons**, **56 graded
+Four courses (Python, Rust, Java, Web), **103 from-scratch lessons**, **182 exercises**, **60 graded
 challenges** and **9 timed assessments**. Everything runs in your browser.
 
 No account required. No server to deploy. No build step. Plain ES modules served
@@ -17,7 +20,7 @@ Live at [th3samaritan.github.io/the-gym](https://th3samaritan.github.io/the-gym/
 
 | Layer | What it is | How it is marked |
 |---|---|---|
-| **Learn** | 99 lessons with explanations, analogies, live runnable examples, worked case studies | 108 exercises + 103 quizzes, pass/fail, hints and answers always available |
+| **Learn** | 99 lessons with explanations, analogies, live runnable examples, worked case studies | 182 exercises + 106 quizzes, pass/fail, hints and answers always available |
 | **Challenges** | 56 graded problems across 6 tiers per language | A four-part rubric, scored 0–100 |
 | **Assessments** | 9 timed, multi-problem exams | Rubric scorecard with a radar profile |
 | **Hall of Fame** | A leaderboard | Ranked by XP, then challenges cleared, then streak |
@@ -121,7 +124,7 @@ site, and it is stated plainly in the UI. Do not put anything sensitive in it.
   data/
     curriculum.js         course index + lookups
     lessons-python.js    41 lessons     track-python.js   17 challenges
-    lessons-rust.js       12 lessons     track-rust.js     12
+    lessons-rust.js       16 lessons     track-rust.js     12
     lessons-java.js       24 lessons     track-java.js     10
     lessons-web.js        22 lessons     track-web.js      17
     assessments.js        exams, rubric weights, grade bands
