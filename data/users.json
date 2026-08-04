@@ -1,1 +1,13 @@
-{"version":1,"users":[]}
+{
+  "version": 1,
+  "users": [
+    {
+      "username": "th3samaritan",
+      "joinedAt": "2026-08-04T00:28:59.056Z",
+      "iv": "fAjOU95iaRY9/QCR",
+      "encrypted": "yYmKFABmM3ktcLbqPFnoZ8vbWoX/TBl69QWkFKANRuZWBuL1/nlWpFbT4CP/xxX126jzFvLDDZkD1Ur+vJLPMC5Hmwhsv385ofmQQMbWp0lqEl8WJLT9iWgj6UozpP3qk1jbAGbn0I0BieFIoEKP1msnsCIMfXqWvevGtr5rwYoAYNlYLlNIzdi4h0d7AZo0OpgYKBgVXKhoXYKshDT4crj2RrakERmJCtGcR2JObpXw6bZrH2jm4WTsioWZ5w1SgwaVu4rhptUbv6+7fERjHBFySZRSc2ST1mdDqBsVkPCX5ym32lZT7Jt3JvUR8qqrD10awTR6a121ibyqy6hRITRqYoBsfk6kUEZ09+R6jSnndkz9xZ4b0+vdaljvR5j7yynpUG1hf+ZI//+PMmWv1g==",
+      "passwordHash": "/nl7p1ybLwIN2vpzmfn7mNAZpLWL7nBuoL1Mlmonji4=",
+      "adminRecovery": "GehbupJYdTiAfCoKPj7qTTtPz7p0Guhcaxo5EPAPmxdQNV2RiR5PXUQCrQxw/1AwuzzBeBYNLC/ujJP9GkZp+UVddqOeUoQVtdv2jbq9lYG36kgmSo9f7X9st7oUVwz/CsLtAJI2+3SJ4WQHApaPEIHDpiUa1/EJoQQPQZbJdKKzvTnef/BRdeSFUrLilBdCX/CcABo8EsVx57IcufqF4gqXdr58nFZu/H6S3yDxfXF9f8/v3SO2sv17TAQMM2NhRdSlXiPNZ5v+zGapYgVM+Z89ZiYNlAp3XGQu2a2T3DPlId8jlL3k86nn51rHOI+8JscOooUR2mXldpLuffoZ2sQV5olgm0sirKJUKio5q7TqvGD8mNPwN+pWdfap+onYWZ06JirrusrC2Raedvh59ETmyXNb1uuJF9aBO1onJm+Aq076OL/55YBsPqnMuhVx30T8D7cTdTPpdj3skL0fZRiD/HkMfhjKrW46ZB9w4NGtotIHRn1itUyvS9RbBWoGNALq9s3wOQJj9QaMh51NUXcbEu8B8R4lfYmHZuO+6KraXp+xvROMZlRNrvsGaYy87St3YU3X8wg2c1YhP6iO2kmkUBVAU7kGnuI3BoVvPxnLxhJ6SbRVLq9Ucz3Oxin89PpQtO/XtRMHqUYE/W4p+GMkzqFIYAF5l2jQUAA0h5w="
+    }
+  ]
+}
