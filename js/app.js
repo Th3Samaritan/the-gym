@@ -420,7 +420,6 @@ function boot() {
       '/data/curriculum.js',
       '/data/assessments.js',
       '/data/lessons-rust-extra.js',
-      '/data/users.json',
       ...TRACKS.flatMap((t) => [
         `/data/lessons-${t.id}.js`,
         t.kind === 'code' ? `/data/track-${t.id}.js` : null,
