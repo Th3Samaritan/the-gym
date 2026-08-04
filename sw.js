@@ -6,7 +6,7 @@
    works offline from the first visit.
    ============================================================ */
 
-const CACHE = 'the-gym-v3';
+const CACHE = 'the-gym-v4';
 const SHELL = [
   '/',
   '/index.html',
@@ -16,6 +16,8 @@ const SHELL = [
   '/css/app.css',
   '/js/app.js',
   '/js/store.js',
+  '/js/auth.js',
+  '/js/crypto.js',
   '/js/runner.js',
   '/js/grader.js',
   '/js/editor.js',
